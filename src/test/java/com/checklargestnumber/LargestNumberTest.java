@@ -9,8 +9,8 @@ public class LargestNumberTest {
 
     @Test
     public void givenThreeInteger_FirstIntegerIsMaximum_ShouldReturnFirstInteger() {
-        int largestNumber = maxNumber.getLargestNumber(50, 20, 10);
-        Assert.assertEquals(50,largestNumber);
+        int largestNumber = maxNumber.getLargestNumber(30, 20, 10);
+        Assert.assertEquals(30,largestNumber);
     }
 
     @Test
@@ -43,4 +43,20 @@ public class LargestNumberTest {
         Assert.assertEquals(30.5f,largestNumber,0.0);
     }
 
+    @Test
+    public void givenThreeStrings_WhenFirstStringIsMaximum_ShouldReturnFirstString() {
+        String largestString = maxNumber.getLargestString("Peach", "Apple", "Banana");
+        Assert.assertEquals("Peach",largestString);
+    }
+
+    @Test
+    public void givenThreeStrings_WhenSecondStringIsMaximum_ShouldReturnSecondString() {
+        String largestString = maxNumber.getLargestString("Apple", "Peach", "Banana");
+        Assert.assertEquals("Peach",largestString);
+    }
+    @Test
+    public void givenThreeStrings_WhenThirdStringIsMaximum_ShouldReturnThirdString() {
+        String largestString = maxNumber.getLargestString("Apple", "Banana", "Peach");
+        Assert.assertEquals("Peach",largestString);
+    }
 }
