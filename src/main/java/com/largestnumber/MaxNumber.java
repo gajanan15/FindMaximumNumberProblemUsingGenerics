@@ -1,9 +1,20 @@
 package com.largestnumber;
+public class MaxNumber<E extends Comparable> {
+    E firstNumber;
+    E secondNumber;
+    E thirdNumber;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
+    public MaxNumber(E firstNumber, E secondNumber, E thirdNumber) {
+        this.firstNumber = firstNumber;
+        this.secondNumber = secondNumber;
+        this.thirdNumber = thirdNumber;
+    }
 
-public class MaxNumber {
-    public <E extends Comparable> E getLargest(E firstNumber,E secondNumber, E thirdNumber) {
+    public E getLargest(){
+        return getLargest(firstNumber,secondNumber,thirdNumber);
+    }
+
+    public <E extends Comparable> E getLargest(E firstNumber, E secondNumber, E thirdNumber) {
         E max=firstNumber;
         if(secondNumber.compareTo(max)>0){
             max=secondNumber;
