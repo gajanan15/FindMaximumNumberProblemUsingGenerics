@@ -24,4 +24,23 @@ public class LargestNumberTest {
         int largestNumber = maxNumber.getLargestNumber(10, 20, 30);
         Assert.assertEquals(30,largestNumber);
     }
+
+    @Test
+    public void givenThreeFloatValue_WhenFirstFloatValueIsMaximum_ShouldReturnFirstFloatValue() {
+        Float largestNumber = maxNumber.getLargestNumberUsingFloat(30.5f, 20.5f, 10.5f);
+        Assert.assertEquals(30.5f,largestNumber,0.0);
+    }
+
+    @Test
+    public void givenThreeFloatValue_WhenSecondFloatValueIsMaximum_ShouldReturnSecondFloatValue() {
+        Float largestNumber = maxNumber.getLargestNumberUsingFloat(10.5f, 30.5f, 20.5f);
+        Assert.assertEquals(30.5f,largestNumber,0.0);
+    }
+
+    @Test
+    public void givenThreeFloatValue_WhenThirdFloatValueIsMaximum_ShouldReturnThirdFloatValue() {
+        Float largestNumber = maxNumber.getLargestNumberUsingFloat(10.5f, 20.5f, 30.5f);
+        Assert.assertEquals(30.5f,largestNumber,0.0);
+    }
+
 }
