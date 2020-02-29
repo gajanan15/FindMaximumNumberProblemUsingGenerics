@@ -32,6 +32,11 @@ public class MaxNumber<E extends Comparable> {
                 max=option[0];
             }
         }
+        printMaximumValue(max);
         return max;
+    }
+
+    private static <E extends Comparable> void printMaximumValue(E max) {
+        System.out.println(max);
     }
 }
